@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+<div id="wrapper">
   <h1>Paul Santos</h1>
   <nav class="navbar" style="list-style-type:none">
     <a href="about.html"> ABOUT</a>
@@ -21,23 +21,38 @@
 
   <h2>Contact Me</h2>
 
+<!-- style this table -->
+<!-- use buttons instead of text for email and twitter etc -->
+  <table>
+    <tr>
+      <th>Email</th>
+      <th>Twitter</th>
+    </tr>
+    <tr>
+     <td>paulmichael.a.santos@gmail.com</td>
+      <td>paulducsantos</td>
+    </tr>
+  </table>
+  <br />
+
   <form>
-    <input type="text" name="firstname">
-    <input type="text" name="lastname">
+    First Name:
+    <input type="text" name="firstname" placeholder="First Name" autofocus="autofocus">
+    <br />
+    Last Name:
+    <input type="text" name="lastname" placeholder="Last Name">
+    <br />
+    Email:
+    <input type="email" name="email" placeholder="Email">
+    <br />
+    Message:<br />
+    <textarea name="message" rows="8" cols="50" placeholder="Type your message here"></textarea>
+    <br />
+    <input type="submit" value="Submit">
   </form>
 
 
-<!-- style this table -->
-  <table class="contact-table">
-  <tr>
-    <th>Email</th>
-    <th>Twitter</th>
-  </tr>
-  <tr>
-    <td>paulmichael.a.santos@gmail.com</td>
-    <td>paulducsantos</td>
-  </tr>
-</table>
 
+</div>
 </body>
 </html>
