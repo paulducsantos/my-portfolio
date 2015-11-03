@@ -76,8 +76,7 @@ li {
 
 a {
   text-decoration: none;
-  /*   color: #AEAEAE;      Changing color for the homework. -Darryl   */
-  color: pink;
+  color: #AEAEAE;
 }
 
 a:hover {
