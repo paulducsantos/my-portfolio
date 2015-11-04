@@ -1,0 +1,133 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 32em;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: 007AF4;
+  font-weight: bold;
+  font-size: 4em;
+  padding-top: .3em;
+  padding-bottom: 0em;
+}
+
+nav {
+  text-align: center;
+  word-spacing: 1em;
+}
+nav > a {
+  text-align: center;
+  
+}
+
+p {
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
+  width: 32em;
+  position: relative;
+}
+
+article::first-letter {
+  font-size: 200%;
+}
+
+.content {
+  text-align: justify;
+}
+
+#profile_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30em;
+  height: auto;
+}
+
+h2 {
+  text-align: center;
+  color: #434343;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+h4 {
+  margin-top: 0px;
+  margin-bottom: 2px;
+}
+
+li {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: #AEAEAE;
+}
+
+a:hover {
+  color: #282828;
+} 
+
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+table, th, td {
+  border: 1px solid black;
+}
+
+th {
+  height: 40px;
+}
+
+td {
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+tr.alt {
+  background-color: #AEAEAE;
+}
+
+.social img {
+  width: 40px;
+  height: auto;
+  padding-bottom: 5px;
+}
+
+/* Bounce In */
+.hvr-bounce-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
