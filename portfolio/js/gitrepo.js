@@ -15,7 +15,7 @@ $(document).ready(function(){
     repoUrl += repoData.full_name;
 
     var repoListGroupItem = $("<a>")
-      .attr("href", repoUrl)
+      .attr("data-url", repoUrl)
       .attr("data-toggle", "modal")
       .attr("data-target", "#myModal")
       .addClass("list-group-item")

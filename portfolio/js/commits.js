@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     $.ajax({
         type: "GET",
-        url: $(this).attr("href") + "/commits",
+        url: $(this).attr("data-url") + "/commits",
         success: function(commits){
           $(".modal-body").empty();
           console.log(commits[0].commit.message);
