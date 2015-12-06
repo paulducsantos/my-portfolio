@@ -13,7 +13,6 @@ $(document).ready(function(){
         url: $(this).attr("data-url") + "/commits",
         success: function(commits){
           $("#commit-list").empty();
-          console.log(commits[0].commit.message);
           for(var i = 0; i < 5; i++){
             var newCommitLine = $("<tr>");
             var commitTableData = buildNewTableDataCommitMsg(commits[i]);
@@ -24,20 +23,29 @@ $(document).ready(function(){
               .append(dateTableData);
             $("#commit-list").append(newCommitLine);
           }
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+          alert("uh-oh");
         }
       });
     });
 
   function buildNewTableDataCommitMsg(commitData){
     var newCommitTableData = $("<td>");
+    var commitLink = $("<a>").attr("href", commitData.html_url)
+                                              .attr("target", "_blank");
     var commitMessage = commitData.commit.message;
-    newCommitTableData.append(commitMessage);
+    newCommitTableData.append(commitLink.append(commitMessage));
     return newCommitTableData;
   }
 
   function buildNewTableDataAuthor(commitData){
     var newAuthorTableData = $("<td>");
-    var commitAuthor = commitData.author.login;
+    if (commitData.author === null){
+      var commitAuthor = ""
+    } else {
+      var commitAuthor = commitData.author.login;
+    }
     newAuthorTableData.append(commitAuthor);
     return newAuthorTableData;
   }
