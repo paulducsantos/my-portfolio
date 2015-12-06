@@ -2,7 +2,6 @@ $(document).ready(function(){
 
   $(".list-group").on("click", "a", function(e){
     e.preventDefault();
-
     $.ajax({
         type: "GET",
         url: $(this).attr("data-url") + "/commits",
@@ -21,9 +20,7 @@ $(document).ready(function(){
           }
         }
       });
-
-
-  });
+    });
 
   function buildNewTableDataCommitMsg(commitData){
     var newCommitTableData = $("<td>");
