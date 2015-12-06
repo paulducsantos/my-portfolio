@@ -18,22 +18,40 @@
           <h1>Paul Santos</h1>
         </div> <!-- end page-header -->
         <ul class="nav nav-pills center-pills">
-          <li role="presentation" class="active"><a href="#">About</a></li>
+          <li role="presentation" class="active"><a href="#about-me" aria-controls="about-me" role="tab" data-toggle="tab">About</a></li>
           <li role="presentation"><a href="#">Blog</a></li>
           <li role="presentation"><a href="#">Resume</a></li>
-          <li role="presentation"><a href="#">Github</a></li>
+          <li role="presentation"><a href="#github" aria-controls="github" role="tab" data-toggle="tab">Github</a></li>
           <li role="presentation"><a href="#">Contact</a></li>
         </ul>
-
-        <div class="content text-center">
-          <p>My name is Paul Santos. I received my education from Rutgers University with a bachelors in Biomedical Engineering.  Sounds exciting doesn't it?  After graduating, I started as a lab technician at a medical device company and worked my way up to become an engineer.  Turns out that I don't enjoy engineering as much as I thought I would.  One day my cousin told me about a startup idea that he had and asked me to work with him and build a site for him.  I began my journey on <a href="www.CodeAcademy.com"> CodeAcademy</a> and I was hooked.  I decided I needed guidance and enrolled in the <a href="http://codingbootcamp.rutgers.edu/learn-more/?utm_campaign=TC%20-%20Branded&utm_keyword=rutgers%20coding%20bootcamp&utm_source=google&utm_medium=cpc&k=rutgers%20coding%20bootcamps=google">Rutgers Coding Bootcamp</a>.</p>
-        </div>
-
-        <img id="profile_img" src="images/babypicture.jpg">
-
-        <p>I was born in Staten Island, NY but grew up in New Jersey. (I still like to say I'm a New Yorker)</p>
-        <p>I love to ride my motorcycles and pretend I'm Valentino Rossi.  I have owned a Ducati Monster, MV Agusta F3, and a Suzuki DRZ400sm.  My sports teams are the NY Knicks, NY Mets, NY Rangers.  I also like to box as a hobby.</p>
       </div> <!-- end col-md-6 col-md-offset-3 -->
+    </div> <!-- end row -->
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <div class="tab-content">
+          <div class="content text-center tab-pane active" role="tabpanel" id="about-me">
+            <p>My name is Paul Santos. I received my education from Rutgers University with a bachelors in Biomedical Engineering.  Sounds exciting doesn't it?  After graduating, I started as a lab technician at a medical device company and worked my way up to become an engineer.  Turns out that I don't enjoy engineering as much as I thought I would.  One day my cousin told me about a startup idea that he had and asked me to work with him and build a site for him.  I began my journey on <a href="www.CodeAcademy.com"> CodeAcademy</a> and I was hooked.  I decided I needed guidance and enrolled in the <a href="http://codingbootcamp.rutgers.edu/learn-more/?utm_campaign=TC%20-%20Branded&utm_keyword=rutgers%20coding%20bootcamp&utm_source=google&utm_medium=cpc&k=rutgers%20coding%20bootcamps=google">Rutgers Coding Bootcamp</a>.</p>
+
+            <img id="profile_img" src="images/babypicture.jpg">
+
+            <p>I was born in Staten Island, NY but grew up in New Jersey. (I still like to say I'm a New Yorker)</p>
+            <p>I love to ride my motorcycles and pretend I'm Valentino Rossi.  I have owned a Ducati Monster, MV Agusta F3, and a Suzuki DRZ400sm.  My sports teams are the NY Knicks, NY Mets, NY Rangers.  I also like to box as a hobby.</p>
+          </div> <!-- end content text-center tab-pane active -->
+
+          <!-- blog section -->
+          <div class="content text-center tab-pane" role="tabpanel" id="blog">
+            
+          </div>
+
+          <!-- all of the github repos will be listed here -->
+          <div class="content text-center tab-pane" role="tabpanel" id="github">
+            <div class="list-group">
+            
+            </div> <!-- end list group -->
+          </div> <!-- end content text-center tab-pane -->
+        </div> <!-- end tab content -->
+
+      </div> <!-- end col-md-6 -->
     </div> <!-- end row -->
   </div> <!-- end container -->
 
@@ -59,14 +77,7 @@
 
 
 
-<!-- all of the github repos will be listed here -->
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <div class="list-group">
-        
-        </div>
-      </div>
-    </div>
+
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
@@ -79,7 +90,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            <h4 class="modal-title" id="myModalLabel">Recent Commits</h4>
           </div>
           <div class="modal-body">
             <table class="table">
@@ -96,8 +107,7 @@
             </table>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
           </div>
         </div>
       </div>
