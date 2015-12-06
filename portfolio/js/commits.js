@@ -2,6 +2,12 @@ $(document).ready(function(){
 
   $(".list-group").on("click", "a", function(e){
     e.preventDefault();
+    $("#modalRepoTitle").empty()
+    var repoTitle = $(this).html();
+    var repoLink = $("<a>").attr("href", "https://github.com/paulducsantos/" + repoTitle)
+                              .attr("target", "_blank")
+                              .append(repoTitle);
+    $("#modalRepoTitle").append(repoLink);
     $.ajax({
         type: "GET",
         url: $(this).attr("data-url") + "/commits",
