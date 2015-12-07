@@ -44,6 +44,10 @@ article::first-letter {
 
 .social img:hover {
   -webkit-animation-name: inflate;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  text-decoration: none;
 }
 
 .center-pills {
@@ -52,12 +56,10 @@ article::first-letter {
 }
 
 @-webkit-keyframes inflate {
-  from {
-    width: 40px;
-    height: auto;
+  25% {
+    -webkit-transform: scale(1.1)
   }
-  to {
-    width: 70px;
-    height: auto;
+  75% {
+    -webkit-transform: scale(0.9);
   }
 }
