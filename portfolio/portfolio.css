@@ -11,9 +11,13 @@ body {
   background-color: #F2F2F2;
 }
 
-h4 {
+h3 {
   display: flex;
   justify-content: center;
+}
+
+hr {
+  width: 60%;
 }
 
 p {
@@ -38,7 +42,22 @@ article::first-letter {
   padding-bottom: 5px;
 }
 
+.social img:hover {
+  -webkit-animation-name: inflate;
+}
+
 .center-pills {
   display: flex;
   justify-content: center;
+}
+
+@-webkit-keyframes inflate {
+  from {
+    width: 40px;
+    height: auto;
+  }
+  to {
+    width: 70px;
+    height: auto;
+  }
 }
