@@ -1,5 +1,19 @@
+.spacing {
+  margin-top: 20px;
+}
+
+#contact-submit {
+  display: flex;
+  justify-content: flex-end;
+}
+
 body {
   background-color: #F2F2F2;
+}
+
+h4 {
+  display: flex;
+  justify-content: center;
 }
 
 p {

@@ -27,9 +27,10 @@
       </div> <!-- end col-md-6 col-md-offset-3 -->
     </div> <!-- end row -->
     <div class="row">
-      <div class="col-md-6 col-md-offset-3 text-center">
+      <div class="col-md-6 col-md-offset-3">
         <div class="tab-content">
-          <div class="content text-center tab-pane active" role="tabpanel" id="about-me">
+          <div class="content text-center tab-pane fade in active" role="tabpanel" id="about-me">
+            <div class="spacing"></div>
             <p class="lead">My name is Paul Santos. I received my education from Rutgers University with a bachelors in Biomedical Engineering.  Sounds exciting doesn't it?  After graduating, I started as a lab technician at a medical device company and worked my way up to become an engineer.  Turns out that I don't enjoy engineering as much as I thought I would.  One day my cousin told me about a startup idea that he had and asked me to work with him and build a site for him.  I began my journey on <a href="www.CodeAcademy.com"> CodeAcademy</a> and I was hooked.  I decided I needed guidance and enrolled in the <a href="http://codingbootcamp.rutgers.edu/learn-more/?utm_campaign=TC%20-%20Branded&utm_keyword=rutgers%20coding%20bootcamp&utm_source=google&utm_medium=cpc&k=rutgers%20coding%20bootcamps=google">Rutgers Coding Bootcamp</a>.</p>
 
             <img id="profile_img" src="images/babypicture.jpg">
@@ -39,7 +40,7 @@
           </div> <!-- end content text-center tab-pane active -->
 
           <!-- blog section -->
-          <div class="content text-center tab-pane" role="tabpanel" id="blog">
+          <div class="content text-center tab-pane fade" role="tabpanel" id="blog">
             <h2>Blog</h2>
 
             <article>
@@ -49,12 +50,12 @@
           </div> <!-- end blog tab content -->
 
           <!-- Resume section -->
-          <div class="content text-center tab-pane" role="tabpanel" id="resume">
+          <div class="content text-center tab-pane fade" role="tabpanel" id="resume">
 
           </div> <!-- end resume tab content -->
 
           <!-- all of the github repos will be listed here -->
-          <div class="content text-center tab-pane" role="tabpanel" id="github">
+          <div class="content text-center tab-pane fade" role="tabpanel" id="github">
 
             <h3>Github Repositories</h3>
             <p class="lead">Below is a list of my projects on Github.  Most, if not all, of my projects will be visible via Github.  Click below to view my commits for each project.  You can also view my Github repository through the link provided.  If you have any questions <a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">click here</a> to contact me.</p>
@@ -64,13 +65,37 @@
           </div> <!-- end content text-center tab-pane -->
 
           <!-- tab content for contact details -->
-          <div class="content text-center tab-pane" role="tabpanel" id="contact">
+          <div class="content tab-pane fade" role="tabpanel" id="contact">
+            <h4>Contact Me</h4>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="first-name" class="col-sm-2">First Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="first-name" placeholder="John">
+                </div>
+                <label for="last-name" class="col-sm-2">Last Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="last-name" placeholder="Doe">
+                </div>
+                <label for="email" class="col-sm-2">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="email" placeholder="JohnDoe@example.com">
+                </div>
+                
+                <label for="message" class="col-sm-2">Message:</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" id="message" rows="4" placeholder="What would you like to ask?"></textarea>
+                  <div class="spacing"></div>
+                </div>
+                
+                <button type="submit" class="btn btn-default col-sm-offset-5" id="contact-submit">Submit</button>
+               
+              </div>
+            </form>
             
           </div> <!-- end contact tab -->
         </div> <!-- end tab content -->
-
       </div> <!-- end col-md-6 -->
-
     </div> <!-- end row -->
   </div> <!-- end container -->
 
