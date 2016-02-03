@@ -2,6 +2,6 @@
   height: 400px;
 }
 
-div {
-  border: 1px solid black;
+footer.page-footer {
+  margin: 0px;
 }
