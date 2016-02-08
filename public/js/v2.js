@@ -15,6 +15,7 @@ $(document).ready(function(){
       $('#nav-name').css('font-size', 63 - (scrollDis/6));
     } else if(scrollDis > 160) {
       $('#nav-name').css('top', -22);
+      $('#nav-name').css('font-size', 39.33);
     }
     if(scrollDis < 100) {
       $('#logo').css('left', 0 - (scrollDis/3) + '%');
