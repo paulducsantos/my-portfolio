@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../static/styles/game.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="ring">
+          <div id="health"></div>
+          <div id="round">Round:<span id="round-count">1</span></div>
+        </div>
+        <div class="little-mac-container little-mac-animate">
+          <div class="littleMac-player littleMac"></div>
+        </div>
+        
+        <div class="tyson-container tyson-animate">
+          <div class="mikeTyson"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <button class="btn btn-default rock selection" data-throw="rock"><i class="fa fa-hand-rock-o fa-5x"></i></button>
+        <button class="btn btn-default paper selection" data-throw="paper"><i class="fa fa-hand-paper-o fa-5x"></i></button>
+        <button class="btn btn-default scissors selection" data-throw="scissors"><i class="fa fa-hand-scissors-o fa-5x"></i></button>
+        <div>Player Wins:<span id="player-wins">0</span></div>
+        <div>Computer Wins:<span id="computer-wins">0</span></div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" id="game-start">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">PLAYER NAME</h4>
+        </div>
+        <div class="modal-body">
+          <input class="example-leaderboard-name" type="text" id="name-input" placeholder="Enter a name">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  
+  <div class="modal fade" id="leaderboards" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="game-winner">LEADERBOARDS</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="example-base example-leaderboard l-demo-container">
+                <table class="table table-hover table-striped" id="leaderboardTable">
+                  <tr>
+                    <th>Player</th>
+                    <th>Score</th>
+                  </tr>
+                </table>
+                <footer>
+                  
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="restart-game">Play Again?</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" id="win-round">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">KEEP IT UP!</h4>
+        </div>
+        <div class="modal-body">
+          You won the round! Keep it up!
+          <img src="../static/images/little-mac-win-round.png" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" id="lose-round">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">GET UP!</h4>
+        </div>
+        <div class="modal-body">
+          You lost the round! Get it together!
+          <img src="../static/images/little-mac-round-loss.png" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal --> 
+
+
+
+
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../static/js/game.js"></script>
+  <script type="text/javascript" src="../static/js/cssClassChangeAnimation.js"></script>
+
+</body>
+</html>

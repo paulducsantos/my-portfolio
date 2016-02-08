@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../static/styles/main.css">
+  <title>Catch em all!</title>
+</head>
+<body>
+
+<!-- nav bar -->
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html">
+            <img class="navbar-brand" alt="Brand" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/English_Pok%C3%A9mon_logo.svg/2000px-English_Pok%C3%A9mon_logo.svg.png">
+          </a> <!-- end brand link -->
+        </div> <!-- end navbar-header -->
+      </div> <!-- end container-fluid -->
+    </div> <!-- end navbar -->
+
+
+  <div class="container">
+    <div class="nav-center">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Easy</a></li>
+        <li><a data-toggle="tab" href="#menu1">Medium</a></li>
+        <li><a data-toggle="tab" href="#menu2">Hard</a></li>
+        <li><a data-toggle="tab" href="#menu3">Very Hard</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <div class="row">
+            <div class="col-sm-offset-5 col-sm-2 text-center">
+              <div class="btn-group" data-toggle="buttons">
+                <button class="btn btn-default" onClick="gameStart(); setTimeout(gameEnd, 20000)">START!</button>
+              </div> <!-- end btn-group -->
+            </div> <!-- end col-sm-offset-5 col-sm-2 text-center -->
+          </div> <!-- end row -->
+          <!-- image content -->
+          <div class="row">
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="bulbasaur" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Bulbasaur</h3>
+                  <p class="text-center">Pokemon #1</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+              <vr />
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="charmander" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Charmander</h3>
+                  <p class="text-center">Pokemon #4</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->      
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="squirtle" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Squirtle</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="pikachu" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Pikachu</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="ninetails" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">NineTails</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="jigglypuff" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Jigglypuff</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+          </div> <!-- end row -->
+
+          <div class="row">
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="psyduck" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Psyduck</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="growlithe" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Growlithe</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->      
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="abra" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Abra</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="slowpoke" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Slowpoke</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="magnemite" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Magnemite</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="farfetched" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Farfetch'd</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+          </div> <!-- end row -->
+
+          <div class="row">
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="gengar" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Gengar</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="cubone" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Cubone</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->      
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="jolteon" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Jolteon</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="flareon" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Flareon</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="snorlax" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Snorlax</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="mew" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Mew</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+          </div> <!-- end row -->
+
+          <div class="row">
+            <div class="col-sm-6 col-md-2 col-md-offset-4">
+              <div class="thumbnail">
+                <img class="game-image" id="mewtwo" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Mewtwo</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->
+            <div class="col-sm-6 col-md-2">
+              <div class="thumbnail">
+                <img class="game-image" id="hitmonchan" src="../static/images/pokeball.jpg" alt="...">
+                <div class="caption">
+                  <h3 class="text-center">Hitmonchan</h3>
+                  <p class="text-center">this is a leaf pokemon</p>
+                </div> <!-- end caption -->
+              </div> <!-- end thumbnail -->
+            </div> <!-- end col-sm-6 col-md-2 -->      
+          </div> <!-- end row -->
+        </div> <!-- end container -->
+
+        <!-- MEDIUM TAB -->
+           
+        <div id="menu1" class="tab-pane fade">
+          <div class="row">
+            <div class="col-sm-offset-5 col-sm-2 text-center">
+              <div class="btn-group" data-toggle="buttons">
+                <button class="btn btn-default" onClick="gameStart(); setTimeout(gameEnd, 20000)">START!</button>
+              </div> <!-- end btn-group -->
+            </div> <!-- end col-sm-offset-5 col-sm-2 text-center -->
+          </div> <!-- end row -->
+          <!-- image content -->
+    <div class="row">
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="bulbasaur" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Bulbasaur</h3>
+            <p class="text-center">Pokemon #1</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+        <vr />
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="charmander" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Charmander</h3>
+            <p class="text-center">Pokemon #4</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->      
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="squirtle" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Squirtle</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="pikachu" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Pikachu</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="ninetails" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">NineTails</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="jigglypuff" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Jigglypuff</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+    </div> <!-- end row -->
+
+    <div class="row">
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="psyduck" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Psyduck</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="growlithe" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Growlithe</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->      
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="abra" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Abra</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="slowpoke" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Slowpoke</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="magnemite" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Magnemite</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="farfetched" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Farfetch'd</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+    </div> <!-- end row -->
+
+    <div class="row">
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="gengar" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Gengar</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="cubone" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Cubone</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->      
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="jolteon" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Jolteon</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="flareon" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Flareon</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="snorlax" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Snorlax</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="mew" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Mew</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+    </div> <!-- end row -->
+
+    <div class="row">
+      <div class="col-sm-6 col-md-2 col-md-offset-4">
+        <div class="thumbnail">
+          <img class="game-image" id="mewtwo" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Mewtwo</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="hitmonchan" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Hitmonchan</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->      
+
+  </div> <!-- end container -->
+
+    
+  <div class="container">
+  <!-- center nav -->
+    <div class="row">
+      <div class="nav-center">
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active"><a href="#">Easy</a></li>
+          <li role="presentation"><a href="#">Medium</a></li>
+          <li role="presentation"><a href="#">Hard</a></li>
+          <li role="presentation"><a href="#">Very Hard</a></li>
+        </ul> <!-- end nav -->
+      </div> <!-- end nav-center -->
+    </div> <!-- end row -->
+    <div class="row">
+      <div class="col-sm-offset-5 col-sm-2 text-center">
+        <div class="btn-group" data-toggle="buttons">
+          <button class="btn btn-default" onClick="gameStart(); setTimeout(gameEnd, 20000)">START!</button>
+        </div> <!-- end btn-group -->
+      </div> <!-- end col-sm-offset-5 col-sm-2 text-center -->
+    </div> <!-- end row -->
+
+  <!-- image content -->
+    <div class="row">
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="bulbasaur" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Bulbasaur</h3>
+            <p class="text-center">Pokemon #1</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+        <vr />
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="charmander" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Charmander</h3>
+            <p class="text-center">Pokemon #4</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->      
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="squirtle" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Squirtle</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="pikachu" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Pikachu</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="ninetails" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">NineTails</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="jigglypuff" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Jigglypuff</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+    </div> <!-- end row -->
+
+    <div class="row">
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="psyduck" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Psyduck</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="growlithe" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Growlithe</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->      
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="abra" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Abra</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="slowpoke" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Slowpoke</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="magnemite" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Magnemite</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="farfetched" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Farfetch'd</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+    </div> <!-- end row -->
+
+    <div class="row">
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="gengar" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Gengar</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="cubone" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Cubone</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->      
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="jolteon" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Jolteon</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="flareon" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Flareon</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="snorlax" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Snorlax</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="mew" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Mew</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+    </div> <!-- end row -->
+
+    <div class="row">
+      <div class="col-sm-6 col-md-2 col-md-offset-4">
+        <div class="thumbnail">
+          <img class="game-image" id="mewtwo" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Mewtwo</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img class="game-image" id="hitmonchan" src="../static/images/pokeball.jpg" alt="...">
+          <div class="caption">
+            <h3 class="text-center">Hitmonchan</h3>
+            <p class="text-center">this is a leaf pokemon</p>
+          </div> <!-- end caption -->
+        </div> <!-- end thumbnail -->
+      </div> <!-- end col-sm-6 col-md-2 -->      
+
+  </div> <!-- end container -->
+<!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body {
+  /*color: white;*/
+  /*letter-spacing: 2px;*/
+  font-weight: 300;
+}
+
+p {
+  line-height: 2rem;
+}
+
+nav .brand-logo {
+  position: absolute;
+  right: 0;
+  left: 0%;
+}
+
+.parallax-container {
+  height: 350px;
+}
+
+footer.page-footer {
+  margin: 0px;
+}
+
+.skills {
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 5px 15px 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.front-end {
+  color: orange;
+  border-color: orange;
+}
+
+.back-end {
+  color: red;
+  border-color: red;
+}
+
+.other {
+  color: teal;
+  border-color: teal;
+}
+
+#nav-name {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  color: red;
+}
