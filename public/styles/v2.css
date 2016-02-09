@@ -28,6 +28,27 @@ footer.page-footer {
   padding: 5px 15px 1px;
   font-weight: 500;
   text-transform: uppercase;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+
+.skill-section {
+  display: flex;
+  justify-content: center;
+}
+
+.skill-section .tldr {
+  width: 600px;
+}
+
+.tldr div.p {
+  text-align: center;
+}
+
+.tldr div.p span {
+  display: none;
 }
 
 .front-end {

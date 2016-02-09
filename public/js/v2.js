@@ -20,7 +20,7 @@ $(document).ready(function(){
     if(scrollDis < 100) {
       $('#logo').css('left', 0 - (scrollDis/3) + '%');
     } else if(scrollDis > 160) {
-      $('#logo').css('left', '-32.8%');
+      $('#logo').css('left', '-32.7%');
     }
   });
 
@@ -43,4 +43,10 @@ $(document).ready(function(){
       });
     }
   }
+
+  $('#TLDR').on('click', function() {
+    $('#skill-tldr').toggleClass('tldr');
+    $('#skill-section').toggleClass('skill-section');
+    $('#tldr-icon').html($('#tldr-icon').text() == 'visibility' ? 'visibility_off' : 'visibility');
+  });
 });
