@@ -45,8 +45,31 @@ $(document).ready(function(){
   }
 
   $('#TLDR').on('click', function() {
-    $('#skill-tldr').toggleClass('tldr');
-    $('#skill-section').toggleClass('skill-section');
-    $('#tldr-icon').html($('#tldr-icon').text() == 'visibility' ? 'visibility_off' : 'visibility');
+    var skills = $('.skills');
+    $('#skill-tldr').fadeOut(300, function() {
+      $('#skill-tldr').toggleClass('tldr');
+      $('#skill-section').toggleClass('skill-section');
+      $('.skills').toggleClass('animation-target');
+      $('.skills').hide();
+      $('#tldr-icon').html($('#tldr-icon').text() == 'visibility' ? 'visibility_off' : 'visibility');
+    });
+    $('#skill-tldr').show(function() {
+      var i = 0;
+      addAClass();
+      function addAClass() {
+        setTimeout(function() {
+          $(skills[i]).toggleClass('animation-target');
+          $(skills[i]).show();
+          i++
+          if(i < skills.length) {
+            addAClass();
+          }
+        }, 40);
+        
+      }
+      
+      
+    });
+    
   });
 });
