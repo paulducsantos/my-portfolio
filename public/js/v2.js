@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var $window = $(window);
   $('.parallax').parallax();
-
+  $('.scrollspy').scrollSpy();
 
 
 /* =================================================================================
@@ -23,6 +23,7 @@ $(document).ready(function(){
       $('#logo').css('left', '-32.7%');
     }
   });
+
 
   setInterval(changeImage, 3000);
   var i = 1;
