@@ -8,10 +8,16 @@ p {
   line-height: 2rem;
 }
 
-nav .brand-logo {
+nav .brandlogo {
   position: absolute;
   right: 0;
   left: 0%;
+}
+
+#myLogo {
+  height: 100px;
+  width: auto;
+  margin-top: -18px;
 }
 
 .parallax-container {
